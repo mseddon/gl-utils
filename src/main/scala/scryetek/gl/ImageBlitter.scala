@@ -310,10 +310,10 @@ class ImageBlitter(gl: GL) {
   val tempArray = new js.Array[Double](16)
 
   def getArray(m: Mat4): js.Array[Double] = {
-    tempArray(0)  = m.m00; tempArray(1) = m.m01; tempArray(2)  = m.m02; tempArray(3)  = m.m03
-    tempArray(4)  = m.m10; tempArray(5) = m.m11; tempArray(6)  = m.m12; tempArray(7)  = m.m13
-    tempArray(8)  = m.m20; tempArray(9) = m.m21; tempArray(10) = m.m22; tempArray(11) = m.m23
-    tempArray(12) = m.m30; tempArray(13) = m.m31; tempArray(14) = m.m32; tempArray(15) = m.m33
+    tempArray(0)  = m.m00; tempArray(1) = m.m10; tempArray(2)  = m.m20; tempArray(3)  = m.m30
+    tempArray(4)  = m.m01; tempArray(5) = m.m11; tempArray(6)  = m.m21; tempArray(7)  = m.m31
+    tempArray(8)  = m.m02; tempArray(9) = m.m12; tempArray(10) = m.m22; tempArray(11) = m.m32
+    tempArray(12) = m.m03; tempArray(13) = m.m13; tempArray(14) = m.m23; tempArray(15) = m.m33
     tempArray
   }
 
